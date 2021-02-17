@@ -17,16 +17,16 @@
         }
 
         .n {
-            margin: 30;
+            margin: 55;
 
         }
 
         .p {
-            margin: 30;
+            margin: 55;
         }
 
         .ps {
-            margin: 30;
+            margin: 55;
         }
 
         h1 {
@@ -37,18 +37,21 @@
             display: block;
             width: 100px;
             float: left;
-            margin-right: 30px;
+            margin-right: 50px;
         }
         .b input {
             padding: 10px;
             width: 150px;
-            border: #76ff5b;
-            background-color: #76ff5b;
+            border: #dadada;
+            background-color: #dadada;
             border-radius: 50px;
             margin-top: 70px;
             margin-left: auto;
             margin-right: auto;
             display: block;
+        }
+        img {
+            margin-top: 5px;
         }
     </style>
 </head>
@@ -56,7 +59,7 @@
 <body>
     <div class="main">
         <h1>드로잉 서비스 가입 하기</h1>
-        <form>
+        <form id="signup_form">
             <div class="n">
                 <label for="nickname">닉네임 </label><br>
                 <input type="text" id="nickname">
@@ -67,11 +70,12 @@
             </div>
             <div class="ps">
                 <label for="password">비밀번호 확인</label><br>
-                <input type="password" id="password">
+                <input type="password" id="password1">
             </div>
             <fieldset>
                 <div class="ming">
-                    <legend>출판사 선택 </legend>
+                    <legend>출판사 선택  &nbsp;&nbsp;&nbsp; (필수X) </legend>
+                    <legend>출판사 선택  &nbsp;&nbsp;&nbsp; (필수X) </legend>
                     <label>
                         <input type="radio" name="publisher" value="pub1"> 귀여운 새싹<br>
                         <img src="img/귀여운 새싹 작업실.jpg" width="95" height="65">
@@ -91,10 +95,29 @@
                 </div>
             </fieldset>
             <div class="b">
-                <input type="button" value="가입하기">
+                <input type="submit" value="가입하기">
             </div>
         </form>
     </div>
+    <script>
+    document.getElementById("signup_form").onsubmit = function () {
+        // 비밀번호입력의 값을 가져와서 변수에 저장
+        // var v1 = document.getElementById("id...").value;
+        // 비밀번호확인의 값을 가져오기
+        // 두 값을 비교!
+        // if (v1 == v2) {
+        //   같을 경우 뭘 해라
+        // } else {
+        //   다를 경우 뭘 해라
+        // }
+        // 다른 경우 alert 띄워주고, form이 전송되지 않도록 막는다.
+        let password = document.getElementById("password").value;
+        let password1 = document.getElementById("password1").value;
+        if (password == password1) {}  else {
+            alert( "비밀번호가일치하지 않습니다.")
+       }
+    };
+    </script>
 </body>
 
 </html>
