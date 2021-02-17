@@ -1,32 +1,100 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <style>
-        </style>
-    </head>
-    <body>
-        <h1>가입 화면</h1>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            background-color: #23CD00;
+            font-family: sans-serif;
+        }
+
+        .main {
+            background-color: white;
+            width: 900px;
+            min-height: 675px;
+            margin: 0 auto;
+            padding: 35px 100px 100px 100px;
+        }
+
+        .n {
+            margin: 30;
+
+        }
+
+        .p {
+            margin: 30;
+        }
+
+        .ps {
+            margin: 30;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .ming label {
+            display: block;
+            width: 100px;
+            float: left;
+            margin-right: 30px;
+        }
+        .b input {
+            padding: 10px;
+            width: 150px;
+            border: #76ff5b;
+            background-color: #76ff5b;
+            border-radius: 50px;
+            margin-top: 70px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>드로잉 서비스 가입 하기</h1>
         <form>
-            <div>
-                <label for="nickname">닉네임 :</label>
+            <div class="n">
+                <label for="nickname">닉네임 </label><br>
                 <input type="text" id="nickname">
-                
             </div>
-            <div>
-                <label for="password">비밀번호 입력 : </label>
+            <div class="p">
+                <label for="password">비밀번호 입력 </label><br>
                 <input type="password" id="password">
             </div>
-            <div>
-                <label for="password">비밀번호 확인</label>
+            <div class="ps">
+                <label for="password">비밀번호 확인</label><br>
                 <input type="password" id="password">
             </div>
             <fieldset>
-                <legend>출판사 선택 : </legend>
-                <label><input type= "radio" name="publisher" value="pub1"> {출판사1}</label>
-                <label><input type= "radio" name="publisher" value="pub2"> {출판사2}</label>
-                <label><input type= "radio" name="publisher" value="pub3"> {출판사3}</label>
-                <label><input type= "radio" name="publisher" value="pub4"> {출판사4}</label>
+                <div class="ming">
+                    <legend>출판사 선택 </legend>
+                    <label>
+                        <input type="radio" name="publisher" value="pub1"> 귀여운 새싹<br>
+                        <img src="img/귀여운 새싹 작업실.jpg" width="95" height="65">
+                    </label>
+                    <label>
+                        <input type="radio" name="publisher" value="pub2"> 출판사2<br>
+                        <img src="img/빨강.jpg" width="95" height="65">
+                    </label>
+                    <label>
+                        <input type="radio" name="publisher" value="pub3"> 출판사3<br>
+                        <img src="img/주황.jpg" width="95" height="65">
+                    </label>
+                    <label>
+                        <input type="radio" name="publisher" value="pub4"> 출판사4<br>
+                        <img src="img/노랑.jpg" width="95" height="65">
+                    </label>
+                </div>
             </fieldset>
+            <div class="b">
+                <input type="button" value="가입하기">
+            </div>
         </form>
-    </body>
+    </div>
+</body>
+
 </html>
